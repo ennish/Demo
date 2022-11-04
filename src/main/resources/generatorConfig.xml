@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!-- TODO need change -->
+  <classPathEntry location="/Users/ennio/.m2/repository/com/h2database/h2/2.1.214/h2-2.1.214.jar" />
+
+  <context id="DB2Tables" targetRuntime="MyBatis3">
+    <jdbcConnection driverClass="org.h2.Driver"
+        connectionURL="jdbc:h2:./db/HS_HAA"
+        userId="sa"
+        password="password">
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="mybatis_generate.model" targetProject="mybatis-generated">
+      <property name="enableSubPackages" value="true" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+
+    <sqlMapGenerator targetPackage="mybatis_generate/xml"  targetProject="mybatis-generated">
+      <property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="mybatis-generated.dao"  targetProject="mybatis-generated">
+      <property name="enableSubPackages" value="true" />
+    </javaClientGenerator>
+
+    <table schema="HS_HAA" tableName="HST_HAA_REDEV_PROJECT" domainObjectName="RedevProject" >
+      <!-- <property name="useActualColumnNames" value="false"/> -->
+      <!-- <generatedKey column="ID" sqlStatement="H2" identity="true" /> -->
+      <!-- <columnOverride column="DATE_FIELD" property="startDate" /> -->
+      <!-- <ignoreColumn column="FRED" /> -->
+      <!-- <columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" /> -->
+    </table>
+    <table schema="HS_HAA" tableName="HST_HAA_REDEV_CATEGORY" domainObjectName="RedevCategory" >
+    </table>
+    <table schema="HS_HAA" tableName="HST_HAA_REDEV_APPLICATION" domainObjectName="RedevApplication" >
+    </table>
+    
+    <table schema="HS_HAA" tableName="HST_HAA_RA_PERSON" domainObjectName="RedevPerson" >
+    </table>
+    
+    <table schema="HS_HAA" tableName="HST_HAA_RA_SEQUENCE" domainObjectName="RaSequence" >
+    </table>
+    
+    <table schema="HS_HAA" tableName="HST_HAA_REDEV_FLAT_LIST" domainObjectName="RedevFlatList" >
+    </table>
+
+    <table schema="HS_HAA" tableName="HST_HAA_REDEV_FLAT_CATEGORY" domainObjectName="RedevFlatCategory" >
+    </table>
+
+    <table schema="HS_HAA" tableName="HST_HAA_REDEV_FLAT_SIZE" domainObjectName="RedevFlatSize" >
+    </table>
+    
+    <table schema="HS_HAA" tableName="HST_HAA_RA_FLAT_SEQUENCE" domainObjectName="RaFlatSequence" >
+    </table>
+    
+    <table schema="HS_HAA" tableName="HST_HAA_RA_CGLS_FLAT" domainObjectName="RaCglsFlat" >
+    </table>
+
+    <table schema="HS_HAA" tableName="HST_HAA_RA_FLAT_MATCH_SIZE" domainObjectName="RaFlatMatchSize" >
+    </table>
+
+    <table schema="HS_HAA" tableName="HST_HAA_RA_MATCH_HEAD" domainObjectName="RaMatchHead" >
+    </table>
+
+    <table schema="HS_HAA" tableName="HST_HAA_RA_MATCH_CAT" domainObjectName="RaMatchCat" >
+    </table>
+
+    <table schema="HS_HAA" tableName="HST_HAA_RA_MATCH_DETAIL" domainObjectName="RaMatchDetail" >
+    </table>
+
+    <table schema="HS_HAA" tableName="HST_HAA_RA_OFFER" domainObjectName="RaOffer" >
+    </table>
+
+    <table schema="HS_HAA" tableName="HST_HAA_RA_BALLOT" domainObjectName="RaBallot" >
+    </table>
+
+    <table schema="HS_HAA" tableName="HST_HAA_RA_ACTION" domainObjectName="RaAction" >
+    </table>
+
+    <table schema="HS_HAA" tableName="HST_HAA_APPLICATION_UPLOAD" domainObjectName="ApplicationUpload" >
+    </table>
+
+    <table schema="HS_HAA" tableName="HST_HAA_MATCH_REPORT_CONFIG" domainObjectName="MatchReportConfig" >
+    </table>
+
+    <table schema="HS_HAA" tableName="HST_HAA_APPLICATION_UPLOAD" domainObjectName="ApplicationUpload" >
+    </table>
+  </context>
+</generatorConfiguration>
