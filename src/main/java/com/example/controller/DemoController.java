@@ -28,12 +28,8 @@ public class DemoController {
     @GetMapping("/ping")
     public ResponseEntity<String> demo() {
 
-        Long cur = System.currentTimeMillis();
-
-        while (System.currentTimeMillis() - cur < 1000) {
-            logger.info("----------------{}---------------", logger.getClass().getName());
-            System.out.println("+++++++++++++++SystemPrint+++++++++++++++");
-        }
+        logger.info("----------------{}---------------", logger.getClass().getName());
+        System.out.println("+++++++++++++++SystemPrint+++++++++++++++");
 
         return ResponseEntity.ok("pong");
     }
